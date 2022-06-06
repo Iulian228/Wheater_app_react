@@ -1,14 +1,14 @@
 import './App.css';
 import LoadingScreen from "./components/LoadingScreen/LoadingScreen";
-import Header from "./components/Header/Header";
 import MainPage from "./components/MainPage/MainPage";
-
-
+import { useState } from 'react';
 function App() {
+  const [position, setPosition] = useState({})
+  
   return (
       <div>
-          <LoadingScreen/>
-          <MainPage/>
+          <LoadingScreen onSuccess={setPosition}/>
+          <MainPage position={position}/>
       </div>
   )
 }
