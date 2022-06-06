@@ -1,0 +1,20 @@
+.loader {
+    background-color: #E3EFF7;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+}
+
+.loader-text {
+    margin-top: -50px;
+    color: #484948;
+}
+
+.hidden {
+    opacity: 0;
+}
