@@ -1,14 +1,14 @@
+import { useState } from 'react';
 import './App.css';
 import LoadingScreen from "./components/LoadingScreen/LoadingScreen";
-import Header from "./components/Header/Header";
 import MainPage from "./components/MainPage/MainPage";
 
-
 function App() {
+  const [position, setPosition] = useState({});
   return (
       <div>
-          <LoadingScreen/>
-          <MainPage/>
+          <LoadingScreen submitPosition={setPosition}/> {/*submitPosition lift up the state from loadingscreen*/}
+          <MainPage position={position}/> {/* pass down the state*/}
       </div>
   )
 }
