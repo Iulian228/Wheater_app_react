@@ -2,7 +2,7 @@ import './LoadingScreen.css'
 import '../Header/Header'
 import MainPage from "../MainPage/MainPage";
 
-export default function LoadingScreen() {
+export default function LoadingScreen(props) {
     // Requesting the location permission
     navigator.geolocation.getCurrentPosition(success, error)
     // Showing on page the loader
@@ -16,8 +16,12 @@ export default function LoadingScreen() {
     function success(pos) {
         const loader = document.querySelector('.loader')
         loader.remove()
-        const latitude = pos.coords.latitude;
-        const longitude = pos.coords.longitude;
+
+        const position = {
+            latitude: pos.coords.latitude,
+            longitude: pos.coords.longitude
+        }
+        props.submitPosition(position);//lift up the position to App.js
         return (
             <MainPage/>
         )
