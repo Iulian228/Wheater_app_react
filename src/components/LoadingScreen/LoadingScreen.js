@@ -1,6 +1,7 @@
 import './LoadingScreen.css'
 import '../Header/Header'
 import MainPage from "../MainPage/MainPage";
+import getWeatherData from "../../API/weather/weatherAPI";
 
 export default function LoadingScreen(props) {
     // Requesting the location permission
@@ -16,12 +17,10 @@ export default function LoadingScreen(props) {
     async function success(pos) {
         const loader = document.querySelector('.loader')
         loader.remove()
-        const position = {
-            latitude: pos.coords.latitude,
-            longitude: pos.coords.longitude
-        }
-
-        props.onSuccess(position)
+        const latitude = pos.coords.latitude;
+        const longitude = pos.coords.longitude;
+        const data = await getWeatherData(latitude, longitude);
+        props.submitData(data);//here we lift up the state right into App.js
         return (
             <MainPage/>
         )
