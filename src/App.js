@@ -4,11 +4,11 @@ import LoadingScreen from "./components/LoadingScreen/LoadingScreen";
 import MainPage from "./components/MainPage/MainPage";
 
 function App() {
-  const [weatherData, setData] = useState([])//using this hook app js is able to get the state from LoadingScreen component
+  const [position, setPosition] = useState({});
   return (
       <div>
-          <LoadingScreen submitData={setData}/>
-          <MainPage weatherData={weatherData}/>d
+          <LoadingScreen submitPosition={setPosition}/> {/*submitPosition lift up the state from loadingscreen*/}
+          <MainPage position={position}/> {/* pass down the state*/}
       </div>
   )
 }

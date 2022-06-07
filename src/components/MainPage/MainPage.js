@@ -6,7 +6,7 @@ export default function MainPage(props) {
     return (
         <div className="main">
             <Header/>
-            <Forecast/>
+            <Forecast position={props.position}/>
         </div>
     )
 }

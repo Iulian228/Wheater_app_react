@@ -1,11 +1,15 @@
 import './LoadingScreen.css'
 import '../Header/Header'
 import MainPage from "../MainPage/MainPage";
-import getWeatherData from "../../API/weather/weatherAPI";
+import { useState } from 'react';
 
 export default function LoadingScreen(props) {
     // Requesting the location permission
-    navigator.geolocation.getCurrentPosition(success, error)
+    const [requested, setRequest] = useState(false);
+    if(!requested){
+        navigator.geolocation.getCurrentPosition(success, error);
+        setRequest(true);
+    }
     // Showing on page the loader
     return(
         <div className="loader">
@@ -14,21 +18,22 @@ export default function LoadingScreen(props) {
         </div>
     )
     // If location permission allowed, it will get the coordinates in variables latitude and longitude and delete the loader
-    async function success(pos) {
-        const loader = document.querySelector('.loader')
-        loader.remove()
-        const latitude = pos.coords.latitude;
-        const longitude = pos.coords.longitude;
-        const data = await getWeatherData(latitude, longitude);
-        props.submitData(data);//here we lift up the state right into App.js
+    function success(pos) {
+        const loader = document.querySelector('.loader');
+        loader.remove();
+        const position = {
+            latitude: pos.coords.latitude,
+            longitude: pos.coords.longitude
+        };
+        props.submitPosition(position);//lift up the position to App.js
         return (
             <MainPage/>
         )
     }
     // If location permission denied, it will just delete the loader
     function error() {
-        const loader = document.querySelector('.loader')
-        loader.remove()
+        const loader = document.querySelector('.loader');
+        loader.remove();
         return (
             <MainPage/>
         )
