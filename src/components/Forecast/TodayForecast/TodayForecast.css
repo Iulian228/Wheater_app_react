@@ -1,7 +1,0 @@
-.main__forecast__today-forecast {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-top: 30px;    
-}
