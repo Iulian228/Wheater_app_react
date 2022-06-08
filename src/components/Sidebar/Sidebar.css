@@ -1,0 +1,62 @@
+.MenuMobil {
+    width: 250px;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #183550;
+    color: white;
+    z-index: 2;
+    padding: 15px 15px;
+}
+.DatosFlex,
+section.MenuMobil .DatosFlex {
+    padding-top: 50px;
+}
+
+.DatosClima,
+.MenuMobil .DatosClima {
+    margin-top: 15px;
+}
+
+.DatosClima p:nth-of-type(1),
+.MenuMobil .DatosClima p:nth-of-type(1) {
+    font-size: 13px;
+}
+
+.DatosClima p:nth-of-type(2),
+.MenuMobil .DatosClima p:nth-of-type(2) {
+    padding-top: 3px;
+    font-weight: bold;
+
+}
+
+.Copy,
+.MenuMobil .Copy {
+    position: absolute;
+    bottom: 10px;
+    width: 200px;
+    text-align: center;
+}
+
+.Copy p,
+.MenuMobil .Copy p {
+    font-size: 13px;
+    color: #ffffffc4;
+}
+
+.HoraActual,
+.MenuMobil .HoraActual {
+    text-align: center;
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 100px;
+    padding: 15px 0;
+    background-color: rgba(10, 8, 36, 0.535);
+    border-radius: 8px;
+}
+
+.HoraActual p,
+.MenuMobil .HoraActual p {
+    font-size: 20px;
+}
