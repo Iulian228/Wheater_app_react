@@ -5,7 +5,7 @@ import Forecast from '../Forecast/Forecast';
 export default function MainPage(props) {
     return (
         <div className="main">
-            <Header/>
+            <Header location={props.location} date={props.date}/>
             <Forecast position={props.position}/>
         </div>
     )
