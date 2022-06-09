@@ -1,7 +1,11 @@
 export default function Info(props) {
     return (
             <div className="DatosFlex">
-                <p>Date Actuale</p>
+                <div id="top">
+                    <p>Date Actuale</p>
+                    <hr/>
+                </div>
+                <div id="DatosClima">
                     <div className="DatosClima">
                         <p>Viteza Vântului:</p>
                         <p id="Velviento">exemplu viteza vantului</p>
@@ -22,6 +26,7 @@ export default function Info(props) {
                         <p>Direcția Vântului:</p>
                         <p id="DireccionViento">exemplu directia vantului</p>
                     </div>
+                </div>
             </div>
     )
 }           
