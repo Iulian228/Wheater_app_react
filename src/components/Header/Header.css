@@ -1,15 +1,10 @@
 .header {
     width: 100%;
-    height: 100px;
+    height: 150px;
     position: relative;
     z-index: 3;
 }
-.fa-bars:before {
-    width: 50px;
-    height: 50px;
-    background-color: aliceblue;
-     content: "\f0c9";
- }
+
  .hd__apis{
      display: flex;
      justify-content: space-between;
@@ -24,20 +19,6 @@
  .hd__date{
     margin-right: 200px;
  }
-.fas {
-    position: fixed;
-    top: 20px;
-    left: 20px;
-    -moz-osx-font-smoothing: grayscale;
-    -webkit-font-smoothing: antialiased;
-    display: inline-block;
-    font-style: normal;
-    font-variant: normal;
-    text-rendering: auto;
-    line-height: 1;
-    height: 50px;
-    width: 50px;
-}
 
 *:before, *:after {
     -webkit-box-sizing: inherit;
@@ -45,4 +26,12 @@
 }
 #menu {
     display: block;
+}
+.image{
+    width: 30px;
+    height: 25px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+
 }
