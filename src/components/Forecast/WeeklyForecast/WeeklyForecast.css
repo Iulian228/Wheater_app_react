@@ -1,0 +1,20 @@
+.main__forecast__weekly-forecast {
+    width: 100%;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    padding: 0 0 0 250px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+top: 1000px;
+}
+body {
+    background-color: #f0f0f0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #061531;
+}
+html {
+    line-height: 1.15;
+    -webkit-text-size-adjust: 100%;
+}

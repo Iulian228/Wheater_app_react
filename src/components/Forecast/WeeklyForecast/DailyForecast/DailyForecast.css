@@ -1,0 +1,27 @@
+.main__forecast__daily-forecast  {
+    width: 130px;
+    height: 100px;
+    border-radius: 8px;
+    background-color: rgba(9, 6, 26, 0.604);
+    text-align: center;
+    position: relative;
+
+}
+.main__forecast__daily-forecast {
+    list-style: none;
+}
+.main__forecast__daily-forecast {
+    display: list-item;
+}
+header {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    padding: 0 0 0 250px;
+    color: white;
+}
+body {
+    background-color: #f0f0f0;
+    font-family: 'Poppins', sans-serif;
+}
