@@ -1,4 +1,4 @@
-export default function getTodayWeather(latitude, longitude) { 
+export default function getTodayWeather(latitude, longitude) {
     const key = '30808ca93ca340a7812151958220706';
     const url = `http://api.weatherapi.com/v1/forecast.json?key=${key}&q=${latitude},${longitude}`;
 

@@ -20,8 +20,8 @@ function getWeekData(lat, long) {
         const date = day.getDate() - i;
         const unixTime = Math.round(new Date(year, month, date) / 1000);
         getWeatherHistory(lat, long, unixTime)
-        .then((result) => { arr.push(result); })
-        .catch((err) => { console.log(err); });
+        .then((result) => { arr.push(result) })
+        .catch((err) => { console.log(err) });
     }
 
     return arr;
