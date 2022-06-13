@@ -3,3 +3,8 @@
     height: 1200px;
     background-color: #242F9B;
 }
+
+.sidebar-move{
+    position: fixed;
+    margin-left: 250px;
+}

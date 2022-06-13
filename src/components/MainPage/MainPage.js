@@ -5,7 +5,7 @@ import Sidebar from "../Sidebar/Sidebar";
 
 export default function MainPage(props) {
     return (
-        <div className="main">
+        <div className="main sidebar-move">
             <Header/>
             <Sidebar/>
             <Forecast position={props.position}/>
