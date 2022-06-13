@@ -46,3 +46,13 @@
 #menu {
     display: block;
 }
+.image{
+    width: 30px;
+    height: 25px;
+    position: fixed;
+    top: 10px;
+    left: 10px;
+}
+.image:hover{
+    cursor: pointer;
+}

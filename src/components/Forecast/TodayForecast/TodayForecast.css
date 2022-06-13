@@ -1,0 +1,10 @@
+.main__forecast__today-forecast{
+    width: 450px;
+    height: 390px;
+    padding-top: 30px;
+    border-right: 1px solid white;
+    text-align: center;
+    border-radius: 50%;
+    position: relative;
+    left: 300px;
+}
