@@ -1,6 +1,15 @@
-export default async function getWeatherData(latitude, longitude, unixTime) { 
-    const key = '08789ab932af5d6de716da1eaa4cfca7';
-    const url = unixTime ? `https://api.openweathermap.org/data/2.5/onecall/timemachine?lat=${latitude}&lon=${longitude}&dt=${unixTime}&appid=${key}` :`https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${key}`;
+export default function getTodayWeather(latitude, longitude) {
+    const key = '30808ca93ca340a7812151958220706';
+    const url = `http://api.weatherapi.com/v1/forecast.json?key=${key}&q=${latitude},${longitude}`;
+
+    return fetch(url)
+                .then((result) => result.json())
+                .catch((err) => { console.log(err) });
+}
+
+export function getWeatherHistory(latitude, longitude, unixTime) {
+    const key = '30808ca93ca340a7812151958220706';
+    const url = `http://api.weatherapi.com/v1/history.json?key=${key}&q=${latitude},${longitude}&unixdt=${unixTime}`;
 
     return fetch(url)
                 .then((result) => result.json())
