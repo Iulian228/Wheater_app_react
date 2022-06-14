@@ -1,17 +1,27 @@
 export default function getTodayWeather(latitude, longitude) {
-    const key = '30808ca93ca340a7812151958220706';
-    const url = `http://api.weatherapi.com/v1/forecast.json?key=${key}&q=${latitude},${longitude}`;
 
-    return fetch(url)
-                .then((result) => result.json())
-                .catch((err) => { console.log(err) });
-}
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition((position) => {
+            latitude = position.coords.longitude;
+            longitude = position.coords.latitude;
+            /*the API provider doesn't allow users to user the API from local host,
+                  so we are using this URL to act like a proxy for our API request so we can use it from local host */
+            const proxy = 'https://cors-anywhere.herokuapp.com/';
+            // the API key
+            const apiKey = '6e35ec85966933fe78031a18b1e94845';
 
-export function getWeatherHistory(latitude, longitude, unixTime) {
-    const key = '30808ca93ca340a7812151958220706';
-    const url = `http://api.weatherapi.com/v1/history.json?key=${key}&q=${latitude},${longitude}&unixdt=${unixTime}`;
+            //including the proxy url in the api call
+            const api1 = `${proxy}api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&exclude=hourly&appid=${apiKey}&units=metric`;
 
-    return fetch(url)
-                .then((result) => result.json())
-                .catch((err) => { console.log(err) });
+            console.log(api1)
+            fetch(api1).then(response=>{
+                return response.json()
+            }).then(item => {
+                // console.log(item)
+                return item
+            }).then(daily => {
+                console.log(daily)
+            })
+        })
+    }
 }

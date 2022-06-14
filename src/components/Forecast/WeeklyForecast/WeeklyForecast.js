@@ -9,8 +9,6 @@ export default function WeeklyForecast(props) {
             <DailyForecast day="today" src="" degree="100" scale="c"/>
             <DailyForecast day="today" src="" degree="100" scale="c"/>
             <DailyForecast day="today" src="" degree="100" scale="c"/>
-            <DailyForecast day="today" src="" degree="100" scale="c"/>
-            <DailyForecast day="today" src="" degree="100" scale="c"/>
         </div>
     )
 }
