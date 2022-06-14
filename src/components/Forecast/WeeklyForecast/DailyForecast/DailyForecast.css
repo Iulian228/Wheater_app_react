@@ -5,7 +5,7 @@
     background-color: rgba(9, 6, 26, 0.604);
     text-align: center;
     position: relative;
-
+margin: 30px;
 }
 .main__forecast__daily-forecast {
     list-style: none;
