@@ -1,24 +1,26 @@
 .header {
     width: 100%;
     height: 150px;
-    position: relative;
+    position: fixed;
     z-index: 3;
 }
 
- .hd__apis{
-     display: flex;
-     justify-content: space-between;
- }
- .hd__location, .hd__date{
+.hd__apis{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+}
+.hd__location, .hd__date{
     height: 30px;
     width: auto;
- }
- .hd__location{
-     margin-left: 200px;
- }
- .hd__date{
-    margin-right: 200px;
- }
+    color: white;
+}
+.hd__location{
+    margin-left: 300px;
+}
+.hd__date{
+    margin-right: 50px;
+}
 
 *:before, *:after {
     -webkit-box-sizing: inherit;
@@ -30,8 +32,8 @@
 .image{
     width: 30px;
     height: 25px;
-    position: absolute;
+    position: fixed;
     top: 10px;
     left: 10px;
-
+    display: flex;
 }
