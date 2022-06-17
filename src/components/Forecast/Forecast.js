@@ -6,7 +6,7 @@ import getWeatherHistory from "../../API/weather/weatherAPI";
 
 function getTodayData(lat, long) {
     return getTodayWeather(lat, long)
-        .then((result) => result)
+        .then((result) => console.log(result))
         .catch((err) => { console.log(err); });
 }
 

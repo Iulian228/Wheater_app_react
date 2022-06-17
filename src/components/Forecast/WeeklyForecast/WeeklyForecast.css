@@ -1,13 +1,8 @@
 .main__forecast__weekly-forecast {
-    width: 100%;
-    left: 0;
-    position: absolute;
-    width: 100%;
-    padding: 0 0 0 250px;
+    position: relative;
     color: white;
     display: flex;
     justify-content: center;
-margin-top: 400px;
 }
 html {
     line-height: 1.15;

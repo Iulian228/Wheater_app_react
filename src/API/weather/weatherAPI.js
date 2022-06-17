@@ -12,7 +12,6 @@ export default function getTodayWeather(latitude, longitude) {
 
             //including the proxy url in the api call
             const api1 = `${proxy}api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&exclude=hourly&appid=${apiKey}&units=metric`;
-
             console.log(api1)
             fetch(api1).then(response=>{
                 return response.json()
@@ -20,7 +19,7 @@ export default function getTodayWeather(latitude, longitude) {
                 // console.log(item)
                 return item
             }).then(daily => {
-                console.log(daily)
+                return daily
             })
         })
     }
