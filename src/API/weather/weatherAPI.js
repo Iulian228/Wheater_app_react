@@ -1,8 +1,26 @@
-export default async function getWeatherData(latitude, longitude, unixTime) { 
-    const key = '08789ab932af5d6de716da1eaa4cfca7';
-    const url = unixTime ? `https://api.openweathermap.org/data/2.5/onecall/timemachine?lat=${latitude}&lon=${longitude}&dt=${unixTime}&appid=${key}` :`https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${key}`;
+export default function getTodayWeather(latitude, longitude) {
 
-    return fetch(url)
-                .then((result) => result.json())
-                .catch((err) => { console.log(err) });
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition((position) => {
+            latitude = position.coords.longitude;
+            longitude = position.coords.latitude;
+            /*the API provider doesn't allow users to user the API from local host,
+                  so we are using this URL to act like a proxy for our API request so we can use it from local host */
+            const proxy = 'https://cors-anywhere.herokuapp.com/';
+            // the API key
+            const apiKey = '6e35ec85966933fe78031a18b1e94845';
+
+            //including the proxy url in the api call
+            const api1 = `${proxy}api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&exclude=hourly&appid=${apiKey}&units=metric`;
+            console.log(api1)
+            fetch(api1).then(response=>{
+                return response.json()
+            }).then(item => {
+                // console.log(item)
+                return item
+            }).then(daily => {
+                return daily
+            })
+        })
+    }
 }
