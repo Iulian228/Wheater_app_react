@@ -10,7 +10,6 @@ function App() {
       <div>
           <LoadingScreen submitPosition={setPosition}/> {/*submitPosition lift up the state from loadingscreen*/}
           <MainPage position={position}><WeeklyForecast></WeeklyForecast></MainPage> {/* pass down the state*/}
-
       </div>
   )
 }

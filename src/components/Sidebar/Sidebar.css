@@ -8,6 +8,9 @@
     color: white;
     z-index: 2;
     padding: 15px 15px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .DatosFlex,
@@ -47,7 +50,8 @@ section.MenuMobil .DatosFlex {
     width: 170px;
     height: 23px;
     margin: 0 auto;
-    margin-top: 30px;
+    margin-left: 23px;
+    margin-bottom: 50px;
     padding: 15px 0;
     background-color: rgba(10, 8, 36, 0.535);
     border-radius: 8px;
@@ -69,9 +73,9 @@ section.MenuMobil .DatosFlex {
 }
 
 #top{
-    margin-top: 0;
+    margin-top: 35px;
 }
 
 #DatosClima{
-    margin-top: 40px;
+    margin-top: 30px;
 }
